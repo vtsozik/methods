@@ -1,0 +1,504 @@
+--------------------------------------------------------------------------------
+I1 cache:         32768 B, 64 B, 4-way associative
+D1 cache:         32768 B, 64 B, 8-way associative
+LL cache:         8388608 B, 64 B, 16-way associative
+Command:          ./a.out
+Data file:        dumpl.txt
+Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw Bc Bcm Bi Bim
+Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw Bc Bcm Bi Bim
+Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw Bc Bcm Bi Bim
+Thresholds:       0.1 100 100 100 100 100 100 100 100 100 100 100 100
+Include dirs:     
+User annotated:   searchinpartiallysortedmatrix.cpp
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+       Ir  I1mr  ILmr      Dr  D1mr  DLmr      Dw  D1mw  DLmw      Bc    Bcm    Bi Bim 
+--------------------------------------------------------------------------------
+1,512,049 1,338 1,300 391,351 9,205 5,279 147,312 1,398 1,054 230,506 13,896 3,906 387  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+     Ir I1mr ILmr      Dr  D1mr  DLmr     Dw D1mw DLmw     Bc   Bcm    Bi Bim  file:function
+--------------------------------------------------------------------------------
+517,127   12   12  86,208 1,317 1,068 31,225    8    0 62,847 1,502     0   0  ???:_dl_lookup_symbol_x
+357,340   29   29 116,174 2,359   613 57,632    5    0 54,931 4,522   102   3  ???:do_lookup_x
+183,635   52   50  47,253 3,098 2,218 15,090  803  528 33,664   809 2,253  35  ???:_dl_relocate_object
+125,481    3    3  37,033   129    42      0    0    0 34,477 1,759     0   0  ???:strcmp
+ 64,391    7    6  27,061   261   161  7,740    7    0 10,302    57     0   0  ???:check_match.11342
+ 57,503   11   11  13,497 1,027   824     16    2    0 12,640 1,901     2   2  ???:_dl_addr
+ 40,875    4    4  13,850     0     0  6,350    0    0  3,800   620     0   0  /home/vtsozik/work/methods/alg/searchinpartiallysortedmatrix.cpp:lsearch(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, int, int, int, int, int, int&, int&)
+ 22,050    1    1   7,875     0     0  4,725    0    0      0     0     0   0  /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_vector.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[](unsigned long) const
+ 17,325    1    1   7,875     0     0  4,725    0    0      0     0     0   0  /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_vector.h:std::vector<int, std::allocator<int> >::operator[](unsigned long) const
+ 11,455   14   14   2,839     2     0  1,558    0    0    772   144     0   0  /home/vtsozik/work/methods/alg/searchinpartiallysortedmatrix.cpp:main
+  8,064    3    3   2,176     5     5  1,024    0    0  1,408    19   128   1  ???:btowc
+  7,753    5    3   2,005    26     0  1,154    3    1  1,150    50     0   0  ???:_dl_name_match_p
+  7,448    5    5   2,716     1     0    224    0    0  1,708    60     0   0  ???:std::locale::_Impl::_M_install_facet(std::locale::id const*, std::locale::facet const*)
+  5,923    8    8   2,246   266    43    752    1    0    675     6     2   2  ???:_dl_fixup
+  4,368   45   45     900    45    45    464   54   54    891   186     0   0  ???:_dl_map_object_from_fd
+  3,881   14   14   1,219    18    17    483   37   36    487    98     0   0  ???:_dl_check_map_versions
+  3,500    1    1   1,250     0     0    750    0    0      0     0     0   0  /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_vector.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[](unsigned long)
+  2,940    6    6     530     0     0    382    1    0    420    89   174   2  ???:bsearch
+  2,757    4    4       5     0     0    810   20   20    536    15     0   0  ???:std::ctype<wchar_t>::_M_initialize_ctype()
+  2,750    0    0   1,250     0     0    750    0    0      0     0     0   0  /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_vector.h:std::vector<int, std::allocator<int> >::operator[](unsigned long)
+  2,743   32   32     517     2     1    217    4    4    661    76     0   0  ???:_dl_map_object_deps
+  2,568    6    6     349     2     1    239    7    7    672   179     0   0  ???:mempcpy
+  2,282   13   13     769     0     0    236    0    0    292    37     0   0  ???:open_path
+  2,176    3    3     640     0     0    512    0    0    256     4     0   0  ???:wctob
+  2,150   12   12     544     6     6    427    2    2    238    38     0   0  ???:open_verify
+  2,068   19   19     501     0     0    295    4    4    430    82     0   0  ???:_dl_map_object
+  2,016    4    4     576    17     0    576    0    0     96     6    48   8  ???:__dynamic_cast
+  1,962   11   11     508     5     5    154    9    9    375    76     0   0  ???:bcmp
+  1,941  144  125   1,292   119     9    322   15   12    123    44   983 170  ???:???
+  1,786    4    4     696    37    35    189    0    0    444    33     0   0  ???:match_symbol
+  1,688    1    1     520     0     0     12    0    0    516    22     0   0  ???:strsep
+  1,575    3    3     675     0     0    600    1    0      0     0    75  73  ???:_dl_runtime_resolve
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/vtsozik/work/methods/alg/searchinpartiallysortedmatrix.cpp
+--------------------------------------------------------------------------------
+    Ir I1mr ILmr    Dr D1mr DLmr    Dw D1mw DLmw    Bc Bcm Bi Bim 
+
+-- line 106 ----------------------------------------
+     .    .    .     .    .    .     .    .    .     .   .  .   .  cout << "sj = " << sj << ", ej = " << ej << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+     .    .    .     .    .    .     .    .    .     .   .  .   .    return false;
+     .    .    .     .    .    .     .    .    .     .   .  .   .   }
+     .    .    .     .    .    .     .    .    .     .   .  .   .  }
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+     .    .    .     .    .    .     .    .    .     .   .  .   .  
+     .    .    .     .    .    .     .    .    .     .   .  .   .  // O(n + m) complexity, where n and m are sizes of matrix dimensions
+ 2,750    1    1     0    0    0 2,200    0    0     0   0  0   0  bool lsearch(const matrix &m, int si, int ei, int sj, int ej, int f, int &fi, int &fj) {
+ 1,100    1    1   550    0    0   550    0    0     0   0  0   0   int i(si), j(ej);
+ 7,375    0    0 2,950    0    0     0    0    0 2,225  64  0   0   do {
+15,600    0    0 4,875    0    0 1,950    0    0   975 364  0   0    if(m[i][j] > f) {
+   750    0    0   375    0    0     0    0    0     0   0  0   0     --j;
+ 9,600    1    1 3,000    0    0 1,200    0    0   600 192  0   0    } else if(m[i][j] < f) { 
+   750    0    0   375    0    0     0    0    0     0   0  0   0     ++i;
+     .    .    .     .    .    .     .    .    .     .   .  .   .    } else {
+   675    1    1   450    0    0   225    0    0     0   0  0   0     fi = i;
+   675    0    0   450    0    0   225    0    0     0   0  0   0     fj = j;
+   450    0    0     0    0    0     0    0    0     0   0  0   0     return true; 
+     .    .    .     .    .    .     .    .    .     .   .  .   .    }
+     .    .    .     .    .    .     .    .    .     .   .  .   .   } while(i <= ei && sj <= j);
+    50    0    0     0    0    0     0    0    0     0   0  0   0   return false;
+ 1,100    0    0   825    0    0     0    0    0     0   0  0   0  }
+     .    .    .     .    .    .     .    .    .     .   .  .   .  
+     .    .    .     .    .    .     .    .    .     .   .  .   .  
+     6    1    1     0    0    0     4    0    0     0   0  0   0  int main() {
+     9    0    0     3    0    0     4    0    0     0   0  0   0   int i, j, k, l, p, q, n(5), o(n), v(n + 2), h(n + 3);
+    13    1    1     1    0    0     3    0    0     0   0  0   0   row r(n, 0);
+    13    1    1     1    1    0     3    0    0     0   0  0   0   matrix m(o, r);
+    37    1    1    17    0    0     1    0    0     6   4  0   0   for(i = 0; i < n; ++i) { 
+   290    1    1   135    0    0    35    0    0    30  15  0   0    for(j = 0, k = 1; j < o; ++j, k += h) {
+   425    0    0   125    0    0    75    0    0     0   0  0   0     m[i][j] = k + i * v; 
+     .    .    .     .    .    .     .    .    .     .   .  .   .    }
+     .    .    .     .    .    .     .    .    .     .   .  .   .   }
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #if 0
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #ifdef NORMAL_PRINT
+     .    .    .     .    .    .     .    .    .     .   .  .   .  cout << "Binary search" << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #define search bsearch
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #else
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #ifdef NORMAL_PRINT
+     .    .    .     .    .    .     .    .    .     .   .  .   .  cout << "Linear search" << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #define search lsearch
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+    37    2    2    17    0    0     1    0    0     6   4  0   0   for(p = 1; p <= n; ++p) {
+   185    0    0    85    0    0     5    0    0    30  12  0   0    for(q = 1; q <= o; ++q) {
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #ifdef NORMAL_PRINT
+     .    .    .     .    .    .     .    .    .     .   .  .   .     cout << "Test for p = " << p << " and q = " << q << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .     cout << "Initialized matrix: " << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .     printMatrix(m, p, q);
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+   625    2    2   275    0    0    25    0    0   100  25  0   0     for(i = 0; i < p; ++i) { 
+ 1,875    1    1   825    0    0    75    0    0   300  70  0   0      for(j = 0; j < q; ++j) { 
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #ifdef NORMAL_PRINT
+     .    .    .     .    .    .     .    .    .     .   .  .   .       cout << "Searching for (" << i << ',' << j << ") element: " << m[i][j] << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+ 6,750    1    1 1,125    0    0 1,125    0    0   225   6  0   0       if(search(m, 0, p - 1, 0, q - 1, m[i][j], k, l)) {
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #ifdef NORMAL_PRINT
+     .    .    .     .    .    .     .    .    .     .   .  .   .        cout << "Found element (" << k << ',' << l << ") element: " << m[k][l] << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+     .    .    .     .    .    .     .    .    .     .   .  .   .       } else {
+     .    .    .     .    .    .     .    .    .     .   .  .   .        cout << "Oops, wasn't able to find searched element!" << endl; 
+     .    .    .     .    .    .     .    .    .     .   .  .   .        return 1;
+     .    .    .     .    .    .     .    .    .     .   .  .   .       }
+     .    .    .     .    .    .     .    .    .     .   .  .   .      }
+     .    .    .     .    .    .     .    .    .     .   .  .   .     }
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #if 1
+    25    0    0     0    0    0    25    0    0     0   0  0   0     i = -1;
+   125    0    0    75    0    0    25    0    0     0   0  0   0     j = n * (h + v);
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #ifdef NORMAL_PRINT
+     .    .    .     .    .    .     .    .    .     .   .  .   .     cout << "Searching for out of range elements: " << i << " and " << j << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+   600    1    1    75    0    0    75    0    0    75   8  0   0     if(search(m, 0, p - 1, 0, q - 1, i, k, l)
+   425    1    1    75    0    0    75    0    0     0   0  0   0     || search(m, 0, p - 1, 0, q - 1, j, k, l)) {
+     .    .    .     .    .    .     .    .    .     .   .  .   .      cout << "Opps, found element (" << k << ',' << l << ") element: " << m[k][l] << " that doesn't exist!" << endl;
+     .    .    .     .    .    .     .    .    .     .   .  .   .      return 1;
+     .    .    .     .    .    .     .    .    .     .   .  .   .     } else {
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #ifdef NORMAL_PRINT
+     .    .    .     .    .    .     .    .    .     .   .  .   .      cout << "Wasn't able to find elements that don't exist" << endl; 
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+     .    .    .     .    .    .     .    .    .     .   .  .   .     }
+     .    .    .     .    .    .     .    .    .     .   .  .   .  #endif
+     .    .    .     .    .    .     .    .    .     .   .  .   .    }
+     .    .    .     .    .    .     .    .    .     .   .  .   .   }
+     9    0    0     0    0    0     2    0    0     0   0  0   0   return 0;
+    24    3    3    11    2    0     5    0    0     2   0  0   0  }
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_vector.h
+--------------------------------------------------------------------------------
+    Ir I1mr ILmr     Dr D1mr DLmr    Dw D1mw DLmw Bc Bcm Bi Bim 
+
+-- line 72 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .    template<typename _Tp, typename _Alloc>
+     .    .    .      .    .    .     .    .    .  .   .  .   .      struct _Vector_base
+     .    .    .      .    .    .     .    .    .  .   .  .   .      {
+     .    .    .      .    .    .     .    .    .  .   .  .   .        typedef typename __gnu_cxx::__alloc_traits<_Alloc>::template
+     .    .    .      .    .    .     .    .    .  .   .  .   .          rebind<_Tp>::other _Tp_alloc_type;
+     .    .    .      .    .    .     .    .    .  .   .  .   .        typedef typename __gnu_cxx::__alloc_traits<_Tp_alloc_type>::pointer
+     .    .    .      .    .    .     .    .    .  .   .  .   .         	pointer;
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+    63    0    0     21    0    0    21    0    0  0   0  0   0        struct _Vector_impl 
+     .    .    .      .    .    .     .    .    .  .   .  .   .        : public _Tp_alloc_type
+     .    .    .      .    .    .     .    .    .  .   .  .   .        {
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	pointer _M_start;
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	pointer _M_finish;
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	pointer _M_end_of_storage;
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	_Vector_impl()
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	: _Tp_alloc_type(), _M_start(0), _M_finish(0), _M_end_of_storage(0)
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	{ }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+    35    2    2      0    0    0    21    0    0  0   0  0   0  	_Vector_impl(_Tp_alloc_type const& __a)
+    77    1    1     35    0    0    28    1    1  0   0  0   0  	: _Tp_alloc_type(__a), _M_start(0), _M_finish(0), _M_end_of_storage(0)
+    14    1    1     14    0    0     0    0    0  0   0  0   0  	{ }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #ifdef __GXX_EXPERIMENTAL_CXX0X__
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	_Vector_impl(_Tp_alloc_type&& __a)
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	: _Tp_alloc_type(std::move(__a)),
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  _M_start(0), _M_finish(0), _M_end_of_storage(0)
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	{ }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #endif
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+-- line 101 ----------------------------------------
+-- line 106 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  std::swap(_M_end_of_storage, __x._M_end_of_storage);
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	}
+     .    .    .      .    .    .     .    .    .  .   .  .   .        };
+     .    .    .      .    .    .     .    .    .  .   .  .   .        
+     .    .    .      .    .    .     .    .    .  .   .  .   .      public:
+     .    .    .      .    .    .     .    .    .  .   .  .   .        typedef _Alloc allocator_type;
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _Tp_alloc_type&
+    42    1    1      0    0    0    28    0    0  0   0  0   0        _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+    42    0    0     42    0    0     0    0    0  0   0  0   0        { return *static_cast<_Tp_alloc_type*>(&this->_M_impl); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        const _Tp_alloc_type&
+    15    1    1      0    0    0    10    0    0  0   0  0   0        _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+    15    1    1     15    0    0     0    0    0  0   0  0   0        { return *static_cast<const _Tp_alloc_type*>(&this->_M_impl); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        allocator_type
+     .    .    .      .    .    .     .    .    .  .   .  .   .        get_allocator() const _GLIBCXX_NOEXCEPT
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { return allocator_type(_M_get_Tp_allocator()); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _Vector_base()
+     .    .    .      .    .    .     .    .    .  .   .  .   .        : _M_impl() { }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     5    1    1      0    0    0     3    0    0  0   0  0   0        _Vector_base(const allocator_type& __a)
+     7    0    0      4    0    0     1    0    0  0   0  0   0        : _M_impl(__a) { }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _Vector_base(size_t __n)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        : _M_impl()
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { _M_create_storage(__n); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+    42    1    1      0    0    0    30    0    0  0   0  0   0        _Vector_base(size_t __n, const allocator_type& __a)
+    30    0    0     12    0    0     6    0    0  0   0  0   0        : _M_impl(__a)
+    60    2    2     30    0    0     6    0    0  0   0  0   0        { _M_create_storage(__n); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #ifdef __GXX_EXPERIMENTAL_CXX0X__
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _Vector_base(_Tp_alloc_type&& __a)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        : _M_impl(std::move(__a)) { }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _Vector_base(_Vector_base&& __x)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        : _M_impl(std::move(__x._M_get_Tp_allocator()))
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { this->_M_impl._M_swap_data(__x._M_impl); }
+-- line 145 ----------------------------------------
+-- line 152 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	else
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  {
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	    size_t __n = __x._M_impl._M_finish - __x._M_impl._M_start;
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	    _M_create_storage(__n);
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  }
+     .    .    .      .    .    .     .    .    .  .   .  .   .        }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #endif
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+    35    0    0      0    0    0    21    0    0  0   0  0   0        ~_Vector_base()
+   115    2    2     49    0    0     7    0    0  0   0  0   0        { _M_deallocate(this->_M_impl._M_start, this->_M_impl._M_end_of_storage
+    56    0    0     28    0    0     7    0    0  0   0  0   0  		      - this->_M_impl._M_start); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .      public:
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _Vector_impl _M_impl;
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        pointer
+    35    1    1      0    0    0    21    0    0  0   0  0   0        _M_allocate(size_t __n)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { return __n != 0 ? _M_impl.allocate(__n) : 0; }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        void
+    42    0    0      0    0    0    28    0    0  0   0  0   0        _M_deallocate(pointer __p, size_t __n)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        {
+    14    0    0      7    0    0     0    0    0  7   0  0   0  	if (__p)
+    42    0    0     21    0    0     7    0    0  0   0  0   0  	  _M_impl.deallocate(__p, __n);
+    14    0    0     14    0    0     0    0    0  0   0  0   0        }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .      private:
+     .    .    .      .    .    .     .    .    .  .   .  .   .        void
+    30    1    1      0    0    0    18    0    0  0   0  0   0        _M_create_storage(size_t __n)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        {
+    48    0    0     18    0    0    12    0    0  0   0  0   0  	this->_M_impl._M_start = this->_M_allocate(__n);
+    24    0    0     18    0    0     6    0    0  0   0  0   0  	this->_M_impl._M_finish = this->_M_impl._M_start;
+    45    2    2     24    0    0     6    0    0  0   0  0   0  	this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+    12    0    0     12    0    0     0    0    0  0   0  0   0        }
+     .    .    .      .    .    .     .    .    .  .   .  .   .      };
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .    /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .     *  @brief A standard container which offers fixed time access to
+     .    .    .      .    .    .     .    .    .  .   .  .   .     *  individual elements in any order.
+     .    .    .      .    .    .     .    .    .  .   .  .   .     *
+     .    .    .      .    .    .     .    .    .  .   .  .   .     *  @ingroup sequences
+-- line 193 ----------------------------------------
+-- line 284 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @brief  Creates a %vector with copies of an exemplar element.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @param  __n  The number of elements to initially create.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @param  __value  An element to copy.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @param  __a  An allocator.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  This constructor fills the %vector with @a __n copies of @a __value.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        explicit
+     8    1    1      0    0    0     6    0    0  0   0  0   0        vector(size_type __n, const value_type& __value = value_type(),
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	     const allocator_type& __a = allocator_type())
+     6    0    0      3    0    0     1    0    0  0   0  0   0        : _Base(__n, __a)
+    11    1    1      6    0    0     1    0    0  0   0  0   0        { _M_fill_initialize(__n, __value); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #endif
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @brief  %Vector copy constructor.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @param  __x  A %vector of identical element and allocator types.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  The newly-created %vector uses a copy of the allocation
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  object used by @a __x.  All the elements of @a __x are copied,
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  but any extra memory in
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @a __x (for fast expansion) will not be copied.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+    40    0    0      0    0    0    30    0    0  0   0  0   0        vector(const vector& __x)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        : _Base(__x.size(),
+    75    1    1     15    0    0    20    0    0  0   0  0   0          _Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
+   110    1    1     30    0    0    25    0    0  0   0  0   0        { this->_M_impl._M_finish =
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
+     .    .    .      .    .    .     .    .    .  .   .  .   .  				      this->_M_impl._M_start,
+     .    .    .      .    .    .     .    .    .  .   .  .   .  				      _M_get_Tp_allocator());
+    30    0    0     25    0    0     0    0    0  0   0  0   0        }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #ifdef __GXX_EXPERIMENTAL_CXX0X__
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @brief  %Vector move constructor.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @param  __x  A %vector of identical element and allocator types.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  The newly-created %vector contains the exact contents of @a __x.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  The contents of @a __x are a valid, but unspecified %vector.
+-- line 322 ----------------------------------------
+-- line 379 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  If the iterators are forward, bidirectional, or
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  random-access, then this will call the elements' copy
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  constructor N times (where N is distance(first,last)) and do
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  no memory reallocation.  But if only input iterators are
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  used, then this will do at most 2N calls to the copy
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  constructor, and logN memory reallocations.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        template<typename _InputIterator>
+     8    1    1      0    0    0     6    0    0  0   0  0   0          vector(_InputIterator __first, _InputIterator __last,
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	       const allocator_type& __a = allocator_type())
+     5    0    0      2    0    0     1    0    0  0   0  0   0  	: _Base(__a)
+     .    .    .      .    .    .     .    .    .  .   .  .   .          {
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  // Check whether it's an integral type.  If so, it's not an iterator.
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  typedef typename std::__is_integer<_InputIterator>::__type _Integral;
+     7    0    0      3    0    0     2    0    0  0   0  0   0  	  _M_initialize_dispatch(__first, __last, _Integral());
+     5    1    1      3    1    0     0    0    0  0   0  0   0  	}
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  The dtor only erases the elements, and note that if the
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  elements themselves are pointers, the pointed-to memory is
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  not touched in any way.  Managing the pointer is the user's
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  responsibility.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+    35    0    0      0    0    0    21    0    0  0   0  0   0        ~vector() _GLIBCXX_NOEXCEPT
+    77    2    2     35    0    0    14    0    0  0   0  0   0        { std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+    56    0    0     28    0    0     7    0    0  0   0  0   0  		      _M_get_Tp_allocator()); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @brief  %Vector assignment operator.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @param  __x  A %vector of identical element and allocator types.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  All the elements of @a __x are copied, but any extra memory in
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @a __x (for fast expansion) will not be copied.  Unlike the
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  copy constructor, the allocator object is not copied.
+-- line 412 ----------------------------------------
+-- line 519 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { return iterator(this->_M_impl._M_start); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  Returns a read-only (constant) iterator that points to the
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  first element in the %vector.  Iteration is done in ordinary
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  element order.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        const_iterator
+    20    0    0      0    0    0    10    0    0  0   0  0   0        begin() const _GLIBCXX_NOEXCEPT
+    55    0    0     25    0    0    10    0    0  0   0  0   0        { return const_iterator(this->_M_impl._M_start); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  Returns a read/write iterator that points one past the last
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  element in the %vector.  Iteration is done in ordinary
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  element order.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        iterator
+     .    .    .      .    .    .     .    .    .  .   .  .   .        end() _GLIBCXX_NOEXCEPT
+-- line 536 ----------------------------------------
+-- line 537 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { return iterator(this->_M_impl._M_finish); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  Returns a read-only (constant) iterator that points one past
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  the last element in the %vector.  Iteration is done in
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  ordinary element order.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        const_iterator
+    20    1    1      0    0    0    10    0    0  0   0  0   0        end() const _GLIBCXX_NOEXCEPT
+    55    0    0     25    0    0    10    0    0  0   0  0   0        { return const_iterator(this->_M_impl._M_finish); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  Returns a read/write reverse iterator that points to the
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  last element in the %vector.  Iteration is done in reverse
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  element order.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        reverse_iterator
+     .    .    .      .    .    .     .    .    .  .   .  .   .        rbegin() _GLIBCXX_NOEXCEPT
+-- line 554 ----------------------------------------
+-- line 617 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .        const_reverse_iterator
+     .    .    .      .    .    .     .    .    .  .   .  .   .        crend() const noexcept
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { return const_reverse_iterator(begin()); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #endif
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // [23.2.4.2] capacity
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**  Returns the number of elements in the %vector.  */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        size_type
+    15    0    0      0    0    0    10    0    0  0   0  0   0        size() const _GLIBCXX_NOEXCEPT
+    55    0    0     30    0    0     0    0    0  0   0  0   0        { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**  Returns the size() of the largest possible %vector.  */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        size_type
+     .    .    .      .    .    .     .    .    .  .   .  .   .        max_size() const _GLIBCXX_NOEXCEPT
+     .    .    .      .    .    .     .    .    .  .   .  .   .        { return _Alloc_traits::max_size(_M_get_Tp_allocator()); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #ifdef __GXX_EXPERIMENTAL_CXX0X__
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+-- line 634 ----------------------------------------
+-- line 742 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @return  Read/write reference to data.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  This operator allows for easy, array-style, data access.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  Note that data access with this operator is unchecked and
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  out_of_range lookups are not defined. (For checked lookups
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  see at().)
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        reference
+ 2,000    1    1      0    0    0 1,500    0    0  0   0  0   0        operator[](size_type __n)
+ 4,250    0    0  2,500    0    0     0    0    0  0   0  0   0        { return *(this->_M_impl._M_start + __n); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /**
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @brief  Subscript access to the data contained in the %vector.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @param __n The index of the element for which data should be
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  accessed.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  @return  Read-only (constant) reference to data.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  This operator allows for easy, array-style, data access.
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  Note that data access with this operator is unchecked and
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  out_of_range lookups are not defined. (For checked lookups
+     .    .    .      .    .    .     .    .    .  .   .  .   .         *  see at().)
+     .    .    .      .    .    .     .    .    .  .   .  .   .         */
+     .    .    .      .    .    .     .    .    .  .   .  .   .        const_reference
+12,600    1    1      0    0    0 9,450    0    0  0   0  0   0        operator[](size_type __n) const
+26,775    1    1 15,750    0    0     0    0    0  0   0  0   0        { return *(this->_M_impl._M_start + __n); }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .      protected:
+     .    .    .      .    .    .     .    .    .  .   .  .   .        /// Safety check used only from at().
+     .    .    .      .    .    .     .    .    .  .   .  .   .        void
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _M_range_check(size_type __n) const
+     .    .    .      .    .    .     .    .    .  .   .  .   .        {
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	if (__n >= this->size())
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  __throw_out_of_range(__N("vector::_M_range_check"));
+-- line 774 ----------------------------------------
+-- line 1124 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // Internal constructor functions follow.
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // Called by the range constructor to implement [23.1.1]/9
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // _GLIBCXX_RESOLVE_LIB_DEFECTS
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // 438. Ambiguity in the "do the right thing" clause
+     .    .    .      .    .    .     .    .    .  .   .  .   .        template<typename _Integer>
+     .    .    .      .    .    .     .    .    .  .   .  .   .          void
+     6    1    1      0    0    0     4    0    0  0   0  0   0          _M_initialize_dispatch(_Integer __n, _Integer __value, __true_type)
+     .    .    .      .    .    .     .    .    .  .   .  .   .          {
+     9    1    1      3    0    0     2    1    0  0   0  0   0  	  this->_M_impl._M_start = _M_allocate(static_cast<size_type>(__n));
+     8    0    0      4    0    0     1    0    0  0   0  0   0  	  this->_M_impl._M_end_of_storage =
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	    this->_M_impl._M_start + static_cast<size_type>(__n);
+     7    1    1      2    0    0     1    0    0  0   0  0   0  	  _M_fill_initialize(static_cast<size_type>(__n), __value);
+     2    0    0      2    0    0     0    0    0  0   0  0   0  	}
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // Called by the range constructor to implement [23.1.1]/9
+     .    .    .      .    .    .     .    .    .  .   .  .   .        template<typename _InputIterator>
+     .    .    .      .    .    .     .    .    .  .   .  .   .          void
+     .    .    .      .    .    .     .    .    .  .   .  .   .          _M_initialize_dispatch(_InputIterator __first, _InputIterator __last,
+     .    .    .      .    .    .     .    .    .  .   .  .   .  			       __false_type)
+     .    .    .      .    .    .     .    .    .  .   .  .   .          {
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	  typedef typename std::iterator_traits<_InputIterator>::
+-- line 1146 ----------------------------------------
+-- line 1171 ----------------------------------------
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	    std::__uninitialized_copy_a(__first, __last,
+     .    .    .      .    .    .     .    .    .  .   .  .   .  					this->_M_impl._M_start,
+     .    .    .      .    .    .     .    .    .  .   .  .   .  					_M_get_Tp_allocator());
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	}
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // Called by the first initialize_dispatch above and by the
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // vector(n,value,a) constructor.
+     .    .    .      .    .    .     .    .    .  .   .  .   .        void
+    12    1    1      0    0    0     8    0    0  0   0  0   0        _M_fill_initialize(size_type __n, const value_type& __value)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        {
+    20    1    1     10    0    0     4    0    0  0   0  0   0  	std::__uninitialized_fill_n_a(this->_M_impl._M_start, __n, __value, 
+     .    .    .      .    .    .     .    .    .  .   .  .   .  				      _M_get_Tp_allocator());
+     8    0    0      6    0    0     2    0    0  0   0  0   0  	this->_M_impl._M_finish = this->_M_impl._M_end_of_storage;
+     4    0    0      4    0    0     0    0    0  0   0  0   0        }
+     .    .    .      .    .    .     .    .    .  .   .  .   .  
+     .    .    .      .    .    .     .    .    .  .   .  .   .  #ifdef __GXX_EXPERIMENTAL_CXX0X__
+     .    .    .      .    .    .     .    .    .  .   .  .   .        // Called by the vector(n) constructor.
+     .    .    .      .    .    .     .    .    .  .   .  .   .        void
+     .    .    .      .    .    .     .    .    .  .   .  .   .        _M_default_initialize(size_type __n)
+     .    .    .      .    .    .     .    .    .  .   .  .   .        {
+     .    .    .      .    .    .     .    .    .  .   .  .   .  	std::__uninitialized_default_n_a(this->_M_impl._M_start, __n, 
+     .    .    .      .    .    .     .    .    .  .   .  .   .  					 _M_get_Tp_allocator());
+-- line 1192 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- User-annotated source: searchinpartiallysortedmatrix.cpp
+--------------------------------------------------------------------------------
+  No information has been collected for searchinpartiallysortedmatrix.cpp
+
+--------------------------------------------------------------------------------
+Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw Bc Bcm Bi Bim 
+--------------------------------------------------------------------------------
+ 7    4    4  9    0    0 13    0    0  2   5  0   0  percentage of events annotated
+

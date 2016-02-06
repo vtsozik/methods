@@ -1,0 +1,214 @@
+Input Matrix: 
+ 2 4
+ 1 3
+ 0 0
+ 0 0
+
+Transposed Matrix: 
+ 2 1 0 0
+ 4 3 0 0
+
+Product Matrix: 
+ 20 14 0 0
+ 14 10 0 0
+ 0 0 0 0
+ 0 0 0 0
+
+Transposed Product Matrix: 
+ 5 11
+ 11 25
+
+Convergence for i = 2, count = 0 is 1.44329e-15, shift = (0.133931,0), remainder = (0.133931,0)
+Convergence for i = 2, count = 1 is 3.33067e-16, shift = (0.133931,0), remainder = (0.133931,0)
+
+Eigen values: (29.8661,0) (0.133931,0) (0,0) (0,0) 
+Convergence for i = 0, count = 0 is 0, shift = (-29.8661,0), remainder = (-29.8661,0)
+Convergence for i = 1, count = 0 is 0, shift = (-29.8661,0), remainder = (-29.8661,0)
+
+Eigen values: (-19.8661,0) (-29.8661,0) (-29.8661,0) 
+Matrix determinant (diagonalized): (-17720.2,0)
+Matrix determinant: -17720.2
+Convergence for i = 0, count = 0 is 0, shift = (-29.8661,0), remainder = (-29.8661,0)
+Convergence for i = 1, count = 0 is 3.55271e-15, shift = (-29.8661,0), remainder = (-29.8661,0)
+
+Eigen values: (-14,0) (-29.8661,0) (-29.8661,0) 
+Matrix determinant (diagonalized): (-12487.7,0)
+Root #0: 0.704719
+Convergence for i = 0, count = 0 is 0, shift = (-29.8661,0), remainder = (-29.8661,0)
+
+Eigen values: (0,0) (-19.8661,0) (-29.8661,0) 
+Matrix determinant (diagonalized): (0,-0)
+Root #1: -0
+Convergence for i = 1, count = 0 is 0, shift = (-29.8661,0), remainder = (-29.8661,0)
+
+Eigen values: (0,0) (-19.8661,0) (-29.8661,0) 
+Matrix determinant (diagonalized): (0,-0)
+Root #2: -0
+Convergence for i = 0, count = 0 is 0, shift = (-0.133931,0), remainder = (-0.133931,0)
+Convergence for i = 1, count = 0 is 1.38778e-16, shift = (-0.133931,0), remainder = (-0.133931,0)
+Convergence for i = 2, count = 0 is 2.51101e-16, shift = (8.88178e-16,0), remainder = (6.37077e-16,0)
+Convergence for i = 2, count = 1 is 2.51138e-16, shift = (8.88178e-16,0), remainder = (6.3704e-16,0)
+Convergence for i = 2, count = 2 is 2.51138e-16, shift = (8.88178e-16,0), remainder = (6.3704e-16,0)
+
+Eigen values: (10.6835,0) (6.3704e-16,0) (-0.133931,0) (-0.133931,0) 
+Matrix determinant (diagonalized): (1.2208e-16,-0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 0, shift = (-0.133931,0), remainder = (-0.133931,0)
+Convergence for i = 1, count = 0 is 0, shift = (-0.133931,0), remainder = (-0.133931,0)
+
+Eigen values: (0.817416,0) (-0.133931,0) (-0.133931,0) 
+Matrix determinant (diagonalized): (0.0146625,-0)
+Matrix determinant: 0.0146625
+Convergence for i = 0, count = 0 is 0, shift = (-0.133931,0), remainder = (-0.133931,0)
+Convergence for i = 1, count = 0 is 0, shift = (-0.133931,0), remainder = (-0.133931,0)
+
+Eigen values: (-0.133931,0) (-0.133931,0) (-0.576048,0) 
+Matrix determinant (diagonalized): (-0.0103329,0)
+Root #0: -0.704719
+Convergence for i = 0, count = 0 is 0, shift = (-0.133931,0), remainder = (-0.133931,0)
+
+Eigen values: (0.817416,0) (0,0) (-0.133931,0) 
+Matrix determinant (diagonalized): (-0,0)
+Root #1: -0
+Convergence for i = 1, count = 0 is 0, shift = (-0.133931,0), remainder = (-0.133931,0)
+
+Eigen values: (0.817416,0) (0,0) (-0.133931,0) 
+Matrix determinant (diagonalized): (-0,0)
+Root #2: -0
+Convergence for i = 2, count = 0 is 0, shift = (10.8073,0), remainder = (10.8073,0)
+Convergence for i = 2, count = 1 is 0, shift = (10.8073,0), remainder = (10.8073,0)
+
+Eigen values: (10.8073,0) (0.01013,0) (0,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 2, count = 0 is 1.3622, shift = (0.817416,-0.576048), remainder = (1.03864,0.768065)
+Convergence for i = 2, count = 1 is 1.67713, shift = (0.817416,1.1521), remainder = (0.122067,-0.374096)
+Convergence for i = 2, count = 2 is 0.77312, shift = (0.179961,-1.14505), remainder = (0.122067,-0.374096)
+
+Eigen values: (0,0) (0,0) (0.122067,-0.374096) (0.179961,-1.14505) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 1, count = 0 is 1.3622, shift = (0.817416,-0.576048), remainder = (1.03864,0.768065)
+Convergence for i = 1, count = 1 is 1.67713, shift = (0.817416,1.1521), remainder = (0.122067,-0.374096)
+Convergence for i = 1, count = 2 is 0.77312, shift = (0.179961,-1.14505), remainder = (0.122067,-0.374096)
+
+Eigen values: (0,0) (0.122067,-0.374096) (0.179961,-1.14505) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 1.3622, shift = (0.817416,-0.576048), remainder = (1.03864,0.768065)
+Convergence for i = 0, count = 1 is 1.67713, shift = (0.817416,1.1521), remainder = (0.122067,-0.374096)
+Convergence for i = 0, count = 2 is 0.77312, shift = (0.179961,-1.14505), remainder = (0.122067,-0.374096)
+
+Eigen values: (0.122067,-0.374096) (0.179961,-1.14505) 
+Matrix determinant (diagonalized): (-0.40639,-0.207095)
+Matrix determinant: -0.40639
+Convergence for i = 0, count = 0 is 0, shift = (0.817416,0), remainder = (0.817416,0)
+
+Eigen values: (0.817416,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Root #0: -0
+
+Eigen values: (0.817416,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Root #1: -0
+Convergence for i = 2, count = 0 is 0, shift = (10.8073,0), remainder = (10.8073,0)
+Convergence for i = 2, count = 1 is 0, shift = (10.8073,0), remainder = (10.8073,0)
+
+Eigen values: (10.8073,0) (0.01013,0) (0,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 2, count = 0 is 1.3622, shift = (0.817416,-0.576048), remainder = (1.03864,0.768065)
+Convergence for i = 2, count = 1 is 1.67713, shift = (0.817416,1.1521), remainder = (0.122067,-0.374096)
+Convergence for i = 2, count = 2 is 0.77312, shift = (0.179961,-1.14505), remainder = (0.122067,-0.374096)
+
+Eigen values: (0,0) (0,0) (0.122067,-0.374096) (0.179961,-1.14505) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 1, count = 0 is 3.33067e-16, shift = (1,0), remainder = (1,0)
+Convergence for i = 2, count = 0 is 0.654497, shift = (0.817416,-0.576048), remainder = (0.582775,0.0349432)
+Convergence for i = 2, count = 1 is 1.57009e-16, shift = (0.817416,-0.576048), remainder = (0.817416,-0.576048)
+Convergence for i = 2, count = 2 is 1.57009e-16, shift = (0.817416,-0.576048), remainder = (0.817416,-0.576048)
+Convergence for i = 2, count = 3 is 1.57009e-16, shift = (0.817416,-0.576048), remainder = (0.817416,-0.576048)
+
+Eigen values: (0.817416,0.645935) (1,0) (0.817416,-0.576048) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 3.33067e-16, shift = (1,0), remainder = (1,0)
+Convergence for i = 1, count = 0 is 0.654497, shift = (0.817416,-0.576048), remainder = (0.582775,0.0349432)
+Convergence for i = 1, count = 1 is 1.57009e-16, shift = (0.817416,-0.576048), remainder = (0.817416,-0.576048)
+Convergence for i = 1, count = 2 is 1.57009e-16, shift = (0.817416,-0.576048), remainder = (0.817416,-0.576048)
+Convergence for i = 1, count = 3 is 1.57009e-16, shift = (0.817416,-0.576048), remainder = (0.817416,-0.576048)
+
+Eigen values: (0.817416,0.645935) (1,0) (0.817416,-0.576048) 
+Matrix determinant (diagonalized): (1.04026,0.0571262)
+Matrix determinant: 1.04026
+Convergence for i = 0, count = 0 is 3.33067e-16, shift = (1,0), remainder = (1,0)
+Convergence for i = 1, count = 0 is 0, shift = (0.817416,0), remainder = (0.817416,0)
+
+Eigen values: (1,0) (0.817416,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Root #0: 0
+Convergence for i = 0, count = 0 is 0, shift = (1,0), remainder = (1,0)
+Convergence for i = 1, count = 0 is 0, shift = (0.817416,0), remainder = (0.817416,0)
+Convergence for i = 1, count = 1 is 0, shift = (0.817416,0), remainder = (0.817416,0)
+
+Eigen values: (1,0) (0.817416,0) (4.44089e-16,0) 
+Matrix determinant (diagonalized): (3.63005e-16,0)
+Root #1: 3.48957e-16
+Convergence for i = 1, count = 0 is 1.3622, shift = (0.817416,-0.576048), remainder = (1.03864,0.768065)
+Convergence for i = 1, count = 1 is 1.67713, shift = (0.817416,1.1521), remainder = (0.122067,-0.374096)
+Convergence for i = 1, count = 2 is 0.77312, shift = (0.179961,-1.14505), remainder = (0.122067,-0.374096)
+
+Eigen values: (0,0) (0.122067,-0.374096) (0.179961,-1.14505) 
+Matrix determinant (diagonalized): (0,0)
+Root #2: 0
+Convergence for i = 0, count = 0 is 0, shift = (29.8661,0), remainder = (29.8661,0)
+Convergence for i = 0, count = 1 is 0, shift = (29.8661,0), remainder = (29.8661,0)
+
+Eigen values: (29.8661,0) (0.133931,0) 
+Convergence for i = 0, count = 0 is 0, shift = (25.2706,0), remainder = (25.2706,0)
+Convergence for i = 0, count = 1 is 0, shift = (25.2706,0), remainder = (25.2706,0)
+
+Eigen values: (25.2706,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+
+Input Matrix: 
+ 2 4
+ 1 3
+ 0 0
+ 0 0
+
+U Matrix: 
+ 0.817416 -0.576048 0 0
+ 0.576048 0.817416 0 0
+ 0 0 1 0
+ 0 0 0 1
+
+E Matrix: 
+ 5.46499 0
+ 0 0.365966
+ 0 0
+ 0 0
+
+VT Matrix: 
+ 0.404554 -0.914514
+ 0.914514 0.404554
+
+Intermediate Matrix: 
+ 4.46716 -0.210814
+ 3.1481 0.299146
+ 0 0
+ 0 0
+
+V Matrix: 
+ 0.404554 0.914514
+ -0.914514 0.404554
+
+Output Matrix: 
+ 2 4
+ 1 3
+ 0 0
+ 0 0
+
+SVD decomposition was successfully verified!

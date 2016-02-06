@@ -1,0 +1,144 @@
+Convergence for i = 0, count=0 is 0.0419736
+Convergence for i = 0, count=1 is 0.0164068
+Convergence for i = 0, count=2 is 0.000352023
+Convergence for i = 0, count=3 is 2.06593e-09
+Convergence for i = 0, count=4 is 0
+Convergence for i = 1, count=0 is 0.0650756
+Convergence for i = 1, count=1 is 0.00486593
+Convergence for i = 1, count=2 is 9.10541e-07
+Convergence for i = 1, count=3 is 0
+Convergence for i = 2, count=0 is 0.00244994
+Convergence for i = 2, count=1 is 4.83953e-08
+Convergence for i = 2, count=2 is 0
+Convergence for i = 3, count=0 is 0.144084
+Convergence for i = 3, count=1 is 0.0146976
+Convergence for i = 3, count=2 is 6.04425e-06
+Convergence for i = 3, count=3 is 9.99201e-16
+Convergence for i = 3, count=4 is 0
+Convergence for i = 4, count=0 is 1.01338e-07
+Convergence for i = 4, count=1 is 0
+Convergence for i = 5, count=0 is 7.01672e-06
+Convergence for i = 5, count=1 is 4.44089e-16
+Convergence for i = 5, count=2 is 0
+Convergence for i = 6, count=0 is 0.0360203
+Convergence for i = 6, count=1 is 4.61461e-05
+Convergence for i = 6, count=2 is 8.71525e-14
+Convergence for i = 6, count=3 is 0
+Convergence for i = 7, count=0 is 0.00162377
+Convergence for i = 7, count=1 is 3.38345e-07
+Convergence for i = 7, count=2 is 0
+Convergence for i = 8, count=0 is 2.60969e-12
+Convergence for i = 8, count=1 is 0
+
+Eigen values: 0.350052 0.512788 0.62455 0.688831 0.860921 1.05803 1.22397 1.41172 1.52667 1.74246 
+Matrix determinant: 1.66562e-06
+Root determinant: -22.3781
+Root determinant: -34.6389
+Root determinant: 3.02262
+Root determinant: -6.86714
+Root determinant: -8.10056
+Root determinant: -37.4934
+Root determinant: -9.2595
+Root determinant: -29.8924
+Root determinant: 28.0474
+Matrix determinant: -1.91341e-05
+Root determinant: 1.53732
+Root determinant: -0.0543331
+Root determinant: -0.703889
+Root determinant: -1.2373
+Root determinant: 1.57683
+Root determinant: 0.20399
+Root determinant: 3.02394
+Root determinant: 0.595722
+Root determinant: 2.81019
+Matrix determinant: 2.95395e-06
+Root determinant: 4.11248
+Root determinant: -2.47989
+Root determinant: -1.15503
+Root determinant: 0.337977
+Root determinant: -2.41703
+Root determinant: 0.0184044
+Root determinant: -0.0925658
+Root determinant: 1.05896
+Root determinant: -0.25843
+Matrix determinant: -1.84163e-05
+Root determinant: 0.289249
+Root determinant: -0.668652
+Root determinant: 0.856995
+Root determinant: -1.08417
+Root determinant: 0.891339
+Root determinant: -0.161455
+Root determinant: -0.493363
+Root determinant: -0.0847042
+Root determinant: -0.0701753
+Matrix determinant: 2.32945e-06
+Root determinant: -0.582832
+Root determinant: -1.94365
+Root determinant: -0.0215662
+Root determinant: 4.37436
+Root determinant: -2.57777
+Root determinant: 4.30786
+Root determinant: 3.30439
+Root determinant: -3.28531
+Root determinant: 0.820458
+Matrix determinant: -2.01122e-05
+Root determinant: -0.0218644
+Root determinant: -0.96778
+Root determinant: -0.843576
+Root determinant: 1.32761
+Root determinant: 1.77945
+Root determinant: -0.365702
+Root determinant: 0.168772
+Root determinant: 1.88203
+Root determinant: 0.340909
+Matrix determinant: 3.00874e-05
+Root determinant: -0.557249
+Root determinant: -1.03679
+Root determinant: -1.87017
+Root determinant: -0.459364
+Root determinant: -1.85694
+Root determinant: -0.124645
+Root determinant: 0.370744
+Root determinant: 1.09752
+Root determinant: -0.929285
+Matrix determinant: -9.2925e-06
+Root determinant: -1.3251
+Root determinant: -4.6651
+Root determinant: 1.1366
+Root determinant: -4.53604
+Root determinant: 2.34801
+Root determinant: 4.28437
+Root determinant: 1.51617
+Root determinant: -2.87411
+Root determinant: -0.676278
+Matrix determinant: 4.03207e-05
+Root determinant: -0.69557
+Root determinant: -0.245022
+Root determinant: 0.095058
+Root determinant: -0.865428
+Root determinant: -0.0363274
+Root determinant: -0.333323
+Root determinant: 3.59798
+Root determinant: -4.16703
+Root determinant: 4.43461
+Matrix determinant: -0.00240734
+Root determinant: -2.39371
+Root determinant: -1.20216
+Root determinant: 1.88778
+Root determinant: -0.428638
+Root determinant: -0.504773
+Root determinant: -1.5214
+Root determinant: -1.22871
+Root determinant: 1.03776
+Root determinant: 1.27522
+ 0.0141489 0.305533 0.720824 0.136101 -0.0687634 -0.00647618 -0.162474 -0.146986 -0.0960988 -0.553471
+ -0.316624 0.198744 -0.434669 -0.314623 -0.229314 -0.286655 -0.302291 -0.517475 -0.0338519 -0.277962
+ -0.490101 -0.0107984 0.175277 0.403244 -0.00254441 -0.249865 -0.545275 0.126077 0.0131331 0.436491
+ 0.0427666 -0.139894 -0.20245 0.470533 0.516094 0.393234 -0.133934 -0.50316 -0.119566 -0.0991092
+ -0.0971622 -0.245907 0.0592397 -0.510138 0.117981 0.527071 -0.541418 0.260453 -0.00501894 -0.116713
+ -0.114614 0.313385 -0.423651 0.419405 -0.304129 0.296198 -0.0363419 0.475243 -0.0460514 -0.351777
+ -0.530488 0.0405419 0.00322588 -0.0759697 0.508248 -0.10832 0.291564 0.168181 0.497091 -0.284102
+ -0.131011 0.60099 -0.0162247 -0.232143 0.389857 0.04999 0.108095 0.110925 -0.57571 0.239949
+ -0.422944 0.118396 0.185611 -0.0398561 -0.387606 0.557455 0.319998 -0.31881 0.138158 0.294856
+ 0.396839 0.55851 -0.0452969 -0.0330198 0.0967988 0.100977 -0.270946 -0.0750161 0.612679 0.231219
+

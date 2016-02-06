@@ -1,0 +1,12 @@
+#!/bin/bash
+
+total="totals.csv"
+data="data.dat"
+echo -n "" > $total
+
+for file in fr.csv th.csv; do
+ cat $file >> $total
+done
+
+cat $total | sed "s/^.*\, //" > $data
+chmod go-rwx $total $total

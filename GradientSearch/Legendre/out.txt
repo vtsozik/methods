@@ -1,0 +1,15 @@
+Initially 0: -0.75
+Initially 1: 0.25
+Initially 2: -0.25
+Initially 3: 0.75
+Initially 4: 0.25
+Initially 5: 0.75
+Initially 6: 0.75
+Initially 7: 0.25
+Error: 0.48362
+Error: 0.180479
+Error: 0.205175
+Error: 0.0517008
+Error: 0.00155581
+Error: 9.06959e-07
+Polynomial: -0.861136 0.347854 -0.339981 0.652146 0.339981 0.652146 0.861136 0.347854

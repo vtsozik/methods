@@ -1,0 +1,6 @@
+#!/bin/bash
+
+projn=rsa
+trg=/media/2E64-CBB7/
+rm -rf $trg/$projn
+cp -rf `find ~vtsozik -type d -name $projn` $trg

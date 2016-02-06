@@ -1,0 +1,14 @@
+#!/bin/bash
+
+hstnm=`hostname`
+cmd=`echo $0 | sed 's#.*\/##g'`
+cdr=`echo $0 | sed 's#\/'$cmd'##'`
+if [ $hstnm = "aurora" ] || [ $hstnm = "SR71" ]; then
+ echo "Backing up $hstnm host"
+ $cdr/backup_flash.bsh
+elif [ $hstnm = "f15" ]; then
+ echo "Backing up f15 host"
+ $cdr/backup_f15.bsh
+else
+ echo "Unknown host -> no backup performed"
+fi

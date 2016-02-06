@@ -1,0 +1,209 @@
+               :#include <iostream>
+               :#include <iomanip>
+               :#include <cmath>
+               :#include <vector>
+               :using namespace std;
+               :
+               :typedef vector<int> row;
+               :typedef vector<row> matrix;
+               :
+               :void printMatrix(const matrix &m, const int p, const int q) {
+               : int w = log(m[p - 1][q - 1]) / log(10) + 1;
+               : for(int i(0); i < p; ++i) {
+               :  const row &r = m[i];
+               :  for(int j(0); j < q; ++j) {
+               :   cout << ' ' << setfill('0') << setw(w) << r[j];
+               :  }
+               :  cout << endl;
+               : }
+               :}
+               :
+               ://#define DEBUG_PRINT
+               ://#define NORMAL_PRINT
+               :#if 0 //A lot of code, but works faster for 70 elements in matrix 
+               :bool bsearch(const matrix &m, int si, int ei, int sj, int ej, int f, int &fi, int &fj) {
+               : int sii(si), eii(ei), sij(sj), eij(ej), sdi, sdj, edi, edj;
+               : do {
+               :  sdi = (sii + eii) / 2;
+               :  sdj = (sij + eij) / 2;
+               :  if(m[sdi][sdj] < f) {
+               :   edi = (sdi < ei) ? sdi + 1 : sdi;
+               :   edj = (sdj < ej) ? sdj + 1 : sdj;
+               :   if(f < m[edi][edj]) {
+               :#ifdef DEBUG_PRINT
+               :cout << "Found range (" << sdi << ',' << sdj << ')' << endl;
+               :cout << "si = " << si << ", ei = " << ei << endl;
+               :cout << "sj = " << sj << ", ej = " << ej << endl;
+               :#endif
+               :      return bsearch(m, edi, ei, sj, sdj, f, fi, fj)
+               :          || bsearch(m, si, sdi, edj, ej, f, fi, fj);
+               :     } else if(f > m[edi][edj]) {
+               :#ifdef DEBUG_PRINT
+               :cout << "Next inner since m[" << edi << "][" << edj << "] ( = " << m[edi][edj] << ") < " << f << endl;
+               :#endif
+               :      sii = edi;
+               :      sij = edj;
+               :     } else {
+               :      fi = edi;
+               :      fj = edj;
+               :     return true;
+               :    }
+               :  } else if(m[sdi][sdj] > f) {
+               :#ifdef DEBUG_PRINT
+               :cout << "Next since m[" << sdi << "][" << sdj << "] > " << f << endl;
+               :#endif
+               :   eii = sdi;
+               :   eij = sdj;
+               :  } else {
+               :   fi = sdi;
+               :   fj = sdj;
+               :   return true;
+               :  }
+               : } while(sii < eii || sij < eij);
+               : return false;
+               :}  
+               :#else // O(n) complexity, where n is size of matrix dimension
+               :bool bsearch(const matrix &m, int si, int ei, int sj, int ej, int f, int &fi, int &fj) {
+               : int sii(si), eii(ei), sij(sj), eij(ej), i, j, mes, mee;
+               : do {
+               :  i = (sii + eii) / 2;
+               :  j = (sij + eij) / 2;
+               :  mes = m[i][j];
+               :  if(mes < f) {
+               :   sii = i;
+               :   sij = j;
+               :  } else if(mes > f) {
+               :   eii = i;
+               :   eij = j;
+               :  } else {
+               :   fi = i;
+               :   fj = j;
+               :   return true; 
+               :  }
+               : } while(eii - sii > 1 || eij - sij > 1);
+               : mes = m[sii][sij];
+               : mee = m[eii][eij];
+               : if(mes < f && f < mee) {
+               :#ifdef DEBUG_PRINT
+               :cout << "Found range (" << sii << ',' << sij << ") - (" << eii << ',' << eij << ')' << endl;
+               :cout << "si = " << si << ", ei = " << ei << endl;
+               :cout << "sj = " << sj << ", ej = " << ej << endl;
+               :#endif
+               :  return bsearch(m, eii, ei, sj, sij, f, fi, fj)
+               :      || bsearch(m, si, sii, eij, ej, f, fi, fj);
+               : } else if(mes == f) {
+               :  fi = sii;
+               :  fj = sij;
+               :  return true;
+               : } else if(mee == f) {
+               :  fi = eii;
+               :  fj = eij;
+               :  return true;
+               : } else {
+               :#ifdef DEBUG_PRINT
+               :cout << "Exit search with m[" << sii << "][" << sij << "] = " << mes << " and m[" << eii << "][" << eij << "] = " << mee << endl;
+               :cout << "si = " << si << ", ei = " << ei << endl;
+               :cout << "sj = " << sj << ", ej = " << ej << endl;
+               :#endif
+               :  return false;
+               : }
+               :}
+               :#endif
+               :
+               :// O(n + m) complexity, where n and m are sizes of matrix dimensions
+   168  0.1763 :bool lsearch(const matrix &m, int si, int ei, int sj, int ej, int f, int &fi, int &fj) { /* lsearch(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, int, int, int, int, int, int&, int&) total:  48060 50.4413 */
+    61  0.0640 : int i(si), j(ej);
+  7507  7.8790 : do {
+ 23534 24.7001 :  if(m[i][j] > f) {
+  1859  1.9511 :   --j;
+ 13062 13.7092 :  } else if(m[i][j] < f) { 
+  1343  1.4095 :   ++i;
+               :  } else {
+   287  0.3012 :   fi = i;
+   100  0.1050 :   fj = j;
+    47  0.0493 :   return true; 
+               :  }
+               : } while(i <= ei && sj <= j);
+               : return false;
+    92  0.0966 :}
+               :
+               :
+               :int main() { /* main total:   1402  1.4715 */
+               : int i, j, k, l, p, q, n(70), o(n), v(n + 2), h(n + 3);
+               : row r(n, 0);
+               : matrix m(o, r);
+               : for(i = 0; i < n; ++i) { 
+     2  0.0021 :  for(j = 0, k = 1; j < o; ++j, k += h) {
+               :   m[i][j] = k + i * v; 
+               :  }
+               : }
+               :#if 0
+               :#ifdef NORMAL_PRINT
+               :cout << "Binary search" << endl;
+               :#endif
+               :#define search bsearch
+               :#else
+               :#ifdef NORMAL_PRINT
+               :cout << "Linear search" << endl;
+               :#endif
+               :#define search lsearch
+               :#endif
+               : for(p = 1; p <= n; ++p) {
+     1  0.0010 :  for(q = 1; q <= o; ++q) {
+               :#ifdef NORMAL_PRINT
+               :   cout << "Test for p = " << p << " and q = " << q << endl;
+               :   cout << "Initialized matrix: " << endl;
+               :   printMatrix(m, p, q);
+               :#endif
+    29  0.0304 :   for(i = 0; i < p; ++i) { 
+   544  0.5710 :    for(j = 0; j < q; ++j) { 
+               :#ifdef NORMAL_PRINT
+               :     cout << "Searching for (" << i << ',' << j << ") element: " << m[i][j] << endl;
+               :#endif
+   824  0.8648 :     if(search(m, 0, p - 1, 0, q - 1, m[i][j], k, l)) {
+               :#ifdef NORMAL_PRINT
+               :      cout << "Found element (" << k << ',' << l << ") element: " << m[k][l] << endl;
+               :#endif
+               :     } else {
+               :      cout << "Oops, wasn't able to find searched element!" << endl; 
+               :      return 1;
+               :     }
+               :    }
+               :   }
+               :#if 1
+               :   i = -1;
+     1  0.0010 :   j = n * (h + v);
+               :#ifdef NORMAL_PRINT
+               :   cout << "Searching for out of range elements: " << i << " and " << j << endl;
+               :#endif
+     1  0.0010 :   if(search(m, 0, p - 1, 0, q - 1, i, k, l)
+               :   || search(m, 0, p - 1, 0, q - 1, j, k, l)) {
+               :    cout << "Opps, found element (" << k << ',' << l << ") element: " << m[k][l] << " that doesn't exist!" << endl;
+               :    return 1;
+               :   } else {
+               :#ifdef NORMAL_PRINT
+               :    cout << "Wasn't able to find elements that don't exist" << endl; 
+               :#endif
+               :   }
+               :#endif
+               :  }
+               : }
+               : return 0;
+               :}
+/* 
+ * Total samples for file : "/home/vtsozik/work/methods/alg/searchinpartiallysortedmatrix.cpp"
+ * 
+ *  49462 51.9128
+ */
+
+
+/* 
+ * Command line: opannotate --source --output-dir=. ./a.out 
+ * 
+ * Interpretation of command line:
+ * Output annotated source file with samples
+ * Output all files
+ * 
+ * CPU: Intel Core/i7, speed 2.668e+06 MHz (estimated)
+ * Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+ */

@@ -1,0 +1,3 @@
+stdnormal_cdf(d1) 0.547907 stdnormal_cdf(d2) 0.503056
+Black73Price: 2.06618, GetMCEPrice: 2.07983, GetMCE1SPrice: 2.06457
+GetMCAPrice: 1.2363

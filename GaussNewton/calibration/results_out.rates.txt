@@ -1,0 +1,289 @@
+Input Matrix: 
+ 1118.92 -1.90416e-13
+ -1.90416e-13 504.232
+
+Transposed Matrix: 
+ 1118.92 -1.90416e-13
+ -1.90416e-13 504.232
+
+Product Matrix: 
+ 1.25198e+06 -3.09074e-10
+ -3.09074e-10 254250
+
+Transposed Product Matrix: 
+ 1.25198e+06 -3.09074e-10
+ -3.09074e-10 254250
+
+Convergence for i = 0, count = 0 is 2.91038e-11, shift = (254250,0), remainder = (254250,0)
+
+Eigen values: (1.25198e+06,0) (254250,0) 
+
+Eigen values: (1,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 2.91038e-11, shift = (254250,0), remainder = (254250,0)
+
+Eigen values: (1.25198e+06,0) (254250,0) 
+
+Eigen values: (1,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Deltas: 
+ 0.129631
+ 0.0563964
+
+Input Matrix: 
+ 1326.05 25.692
+ 25.692 617.545
+
+Transposed Matrix: 
+ 1326.05 25.692
+ 25.692 617.545
+
+Product Matrix: 
+ 1.75908e+06 49934.9
+ 49934.9 382022
+
+Transposed Product Matrix: 
+ 1.75908e+06 49934.9
+ 49934.9 382022
+
+Convergence for i = 0, count = 0 is 1.16415e-10, shift = (380214,0), remainder = (380214,0)
+Convergence for i = 0, count = 1 is 1.16415e-10, shift = (380214,0), remainder = (380214,0)
+
+Eigen values: (1.76088e+06,0) (380214,0) 
+Convergence for i = 0, count = 0 is 9.09495e-12, shift = (1809.37,0), remainder = (1809.37,0)
+Convergence for i = 0, count = 1 is 0, shift = (1809.37,0), remainder = (1809.37,0)
+Convergence for i = 0, count = 2 is 0, shift = (1809.37,0), remainder = (1809.37,0)
+
+Eigen values: (1809.37,0) (-5.68434e-12,0) 
+Matrix determinant (diagonalized): (-1.02851e-08,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 1.16415e-10, shift = (380214,0), remainder = (380214,0)
+Convergence for i = 0, count = 1 is 1.16415e-10, shift = (380214,0), remainder = (380214,0)
+
+Eigen values: (1.76088e+06,0) (380214,0) 
+Convergence for i = 0, count = 0 is 9.09495e-12, shift = (1809.37,0), remainder = (1809.37,0)
+Convergence for i = 0, count = 1 is 0, shift = (1809.37,0), remainder = (1809.37,0)
+Convergence for i = 0, count = 2 is 0, shift = (1809.37,0), remainder = (1809.37,0)
+
+Eigen values: (1809.37,0) (-5.68434e-12,0) 
+Matrix determinant (diagonalized): (-1.02851e-08,0)
+Matrix determinant: 0
+Deltas: 
+ -0.0116714
+ 0.0345174
+
+Input Matrix: 
+ 1501.45 12.4091
+ 12.4091 726.302
+
+Transposed Matrix: 
+ 1501.45 12.4091
+ 12.4091 726.302
+
+Product Matrix: 
+ 2.2545e+06 27644.4
+ 27644.4 527668
+
+Transposed Product Matrix: 
+ 2.2545e+06 27644.4
+ 27644.4 527668
+
+Convergence for i = 0, count = 0 is 0, shift = (527226,0), remainder = (527226,0)
+Convergence for i = 0, count = 1 is 0, shift = (527226,0), remainder = (527226,0)
+
+Eigen values: (2.25494e+06,0) (527226,0) 
+Convergence for i = 0, count = 0 is 4.60432e-12, shift = (443.44,0), remainder = (443.44,0)
+Convergence for i = 0, count = 1 is 0, shift = (443.44,0), remainder = (443.44,0)
+Convergence for i = 0, count = 2 is 0, shift = (443.44,0), remainder = (443.44,0)
+
+Eigen values: (443.44,0) (3.18323e-12,0) 
+Matrix determinant (diagonalized): (1.41157e-09,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 0, shift = (527226,0), remainder = (527226,0)
+Convergence for i = 0, count = 1 is 0, shift = (527226,0), remainder = (527226,0)
+
+Eigen values: (2.25494e+06,0) (527226,0) 
+Convergence for i = 0, count = 0 is 4.60432e-12, shift = (443.44,0), remainder = (443.44,0)
+Convergence for i = 0, count = 1 is 0, shift = (443.44,0), remainder = (443.44,0)
+Convergence for i = 0, count = 2 is 0, shift = (443.44,0), remainder = (443.44,0)
+
+Eigen values: (443.44,0) (3.18323e-12,0) 
+Matrix determinant (diagonalized): (1.41157e-09,0)
+Matrix determinant: 0
+Deltas: 
+ 0.00270157
+ -0.00119175
+
+Input Matrix: 
+ 1494.55 13.2158
+ 13.2158 721.575
+
+Transposed Matrix: 
+ 1494.55 13.2158
+ 13.2158 721.575
+
+Product Matrix: 
+ 2.23387e+06 29288
+ 29288 520845
+
+Transposed Product Matrix: 
+ 2.23387e+06 29288
+ 29288 520845
+
+Convergence for i = 0, count = 0 is 1.16415e-10, shift = (520345,0), remainder = (520345,0)
+Convergence for i = 0, count = 1 is 1.16415e-10, shift = (520345,0), remainder = (520345,0)
+
+Eigen values: (2.23437e+06,0) (520345,0) 
+Convergence for i = 0, count = 0 is 3.52429e-12, shift = (501.597,0), remainder = (501.597,0)
+Convergence for i = 0, count = 1 is 5.68434e-14, shift = (501.597,0), remainder = (501.597,0)
+Convergence for i = 0, count = 2 is 0, shift = (501.597,0), remainder = (501.597,0)
+
+Eigen values: (501.597,0) (3.35376e-12,0) 
+Matrix determinant (diagonalized): (1.68224e-09,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 1.16415e-10, shift = (520345,0), remainder = (520345,0)
+Convergence for i = 0, count = 1 is 1.16415e-10, shift = (520345,0), remainder = (520345,0)
+
+Eigen values: (2.23437e+06,0) (520345,0) 
+Convergence for i = 0, count = 0 is 3.52429e-12, shift = (501.597,0), remainder = (501.597,0)
+Convergence for i = 0, count = 1 is 5.68434e-14, shift = (501.597,0), remainder = (501.597,0)
+Convergence for i = 0, count = 2 is 0, shift = (501.597,0), remainder = (501.597,0)
+
+Eigen values: (501.597,0) (3.35376e-12,0) 
+Matrix determinant (diagonalized): (1.68224e-09,0)
+Matrix determinant: 0
+Deltas: 
+ -7.22356e-05
+ 0.000312945
+
+Input Matrix: 
+ 1496.3 13.1173
+ 13.1173 722.616
+
+Transposed Matrix: 
+ 1496.3 13.1173
+ 13.1173 722.616
+
+Product Matrix: 
+ 2.23909e+06 29106.2
+ 29106.2 522345
+
+Transposed Product Matrix: 
+ 2.23909e+06 29106.2
+ 29106.2 522345
+
+Convergence for i = 0, count = 0 is 1.74623e-10, shift = (521852,0), remainder = (521852,0)
+Convergence for i = 0, count = 1 is 5.82077e-11, shift = (521852,0), remainder = (521852,0)
+
+Eigen values: (2.23958e+06,0) (521852,0) 
+Convergence for i = 0, count = 0 is 5.91172e-12, shift = (494.333,0), remainder = (494.333,0)
+Convergence for i = 0, count = 1 is 0, shift = (494.333,0), remainder = (494.333,0)
+Convergence for i = 0, count = 2 is 0, shift = (494.333,0), remainder = (494.333,0)
+
+Eigen values: (494.333,0) (-6.53699e-12,0) 
+Matrix determinant (diagonalized): (-3.23145e-09,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 1.74623e-10, shift = (521852,0), remainder = (521852,0)
+Convergence for i = 0, count = 1 is 5.82077e-11, shift = (521852,0), remainder = (521852,0)
+
+Eigen values: (2.23958e+06,0) (521852,0) 
+Convergence for i = 0, count = 0 is 5.91172e-12, shift = (494.333,0), remainder = (494.333,0)
+Convergence for i = 0, count = 1 is 0, shift = (494.333,0), remainder = (494.333,0)
+Convergence for i = 0, count = 2 is 0, shift = (494.333,0), remainder = (494.333,0)
+
+Eigen values: (494.333,0) (-6.53699e-12,0) 
+Matrix determinant (diagonalized): (-3.23145e-09,0)
+Matrix determinant: 0
+Deltas: 
+ 1.96065e-05
+ 3.72894e-06
+
+Input Matrix: 
+ 1496.32 13.1199
+ 13.1199 722.622
+
+Transposed Matrix: 
+ 1496.32 13.1199
+ 13.1199 722.622
+
+Product Matrix: 
+ 2.23915e+06 29112.3
+ 29112.3 522354
+
+Transposed Product Matrix: 
+ 2.23915e+06 29112.3
+ 29112.3 522354
+
+Convergence for i = 0, count = 0 is 5.82077e-11, shift = (521861,0), remainder = (521861,0)
+Convergence for i = 0, count = 1 is 5.82077e-11, shift = (521861,0), remainder = (521861,0)
+
+Eigen values: (2.23964e+06,0) (521861,0) 
+Convergence for i = 0, count = 0 is 7.95808e-13, shift = (494.525,0), remainder = (494.525,0)
+Convergence for i = 0, count = 1 is 0, shift = (494.525,0), remainder = (494.525,0)
+Convergence for i = 0, count = 2 is 0, shift = (494.525,0), remainder = (494.525,0)
+
+Eigen values: (494.525,0) (-3.29692e-12,0) 
+Matrix determinant (diagonalized): (-1.63041e-09,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 5.82077e-11, shift = (521861,0), remainder = (521861,0)
+Convergence for i = 0, count = 1 is 5.82077e-11, shift = (521861,0), remainder = (521861,0)
+
+Eigen values: (2.23964e+06,0) (521861,0) 
+Convergence for i = 0, count = 0 is 7.95808e-13, shift = (494.525,0), remainder = (494.525,0)
+Convergence for i = 0, count = 1 is 0, shift = (494.525,0), remainder = (494.525,0)
+Convergence for i = 0, count = 2 is 0, shift = (494.525,0), remainder = (494.525,0)
+
+Eigen values: (494.525,0) (-3.29692e-12,0) 
+Matrix determinant (diagonalized): (-1.63041e-09,0)
+Matrix determinant: 0
+Deltas: 
+ 2.0979e-07
+ 2.70251e-06
+
+Input Matrix: 
+ 1496.34 13.1192
+ 13.1192 722.63
+
+Transposed Matrix: 
+ 1496.34 13.1192
+ 13.1192 722.63
+
+Product Matrix: 
+ 2.23919e+06 29111
+ 29111 522367
+
+Transposed Product Matrix: 
+ 2.23919e+06 29111
+ 29111 522367
+
+Convergence for i = 0, count = 0 is 5.82077e-11, shift = (521873,0), remainder = (521873,0)
+Convergence for i = 0, count = 1 is 5.82077e-11, shift = (521873,0), remainder = (521873,0)
+
+Eigen values: (2.23969e+06,0) (521873,0) 
+Convergence for i = 0, count = 0 is 2.33058e-12, shift = (494.473,0), remainder = (494.473,0)
+Convergence for i = 0, count = 1 is 0, shift = (494.473,0), remainder = (494.473,0)
+Convergence for i = 0, count = 2 is 0, shift = (494.473,0), remainder = (494.473,0)
+
+Eigen values: (494.473,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Convergence for i = 0, count = 0 is 5.82077e-11, shift = (521873,0), remainder = (521873,0)
+Convergence for i = 0, count = 1 is 5.82077e-11, shift = (521873,0), remainder = (521873,0)
+
+Eigen values: (2.23969e+06,0) (521873,0) 
+Convergence for i = 0, count = 0 is 2.33058e-12, shift = (494.473,0), remainder = (494.473,0)
+Convergence for i = 0, count = 1 is 0, shift = (494.473,0), remainder = (494.473,0)
+Convergence for i = 0, count = 2 is 0, shift = (494.473,0), remainder = (494.473,0)
+
+Eigen values: (494.473,0) (0,0) 
+Matrix determinant (diagonalized): (0,0)
+Matrix determinant: 0
+Deltas: 
+ 1.68104e-07
+ 1.41329e-07
+
+Sum Of Least Squares: 1.16578
+Fitted parameters:
+ 2.16707 0.277981

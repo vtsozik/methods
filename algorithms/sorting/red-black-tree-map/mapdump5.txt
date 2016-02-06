@@ -1,0 +1,5 @@
+key value: 4, node color: black, left child key: 2, right child key: 5
+key value: 2, node color: black, left child key: 1, right child key: 3
+key value: 1, node color: red, left child key: 0, right child key: 0
+key value: 3, node color: red, left child key: 0, right child key: 0
+key value: 5, node color: black, left child key: 0, right child key: 0

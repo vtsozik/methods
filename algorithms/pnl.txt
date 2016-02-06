@@ -1,0 +1,24 @@
+Q: Write an algorithm which searches maximum consecutive sum of PNL values in
+a given PNL array? It reports sum value and beginning and indices. PNL values 
+can be negative. What will be the complexity of this search?
+
+A: Please see compare function below, notice that max_sum compare with sum 
+inside second loop (not outside of it). Algorithm below has quadratic 
+complexity.
+
+void compare(vector<double> &pnl) {
+ double sum, max_sum = pnl[0];
+ int max_beg = 0, max_end = 0;
+ for(int i = 0; i < pnl.size(); ++i) {
+  sum = 0.
+  for(int j = i; j < pnl.size(); ++j) {
+   sum += pnl[j];
+   if(max_sum < sum) {
+    max_beg = i;
+    max_end = j;
+    max_sum = sum;
+   }
+  }
+ }
+ cerr << "Max sum: " << max_sum << " from: " << max_beg << " to: " << max_end << endl;
+}

@@ -1,0 +1,86 @@
+testmap: inserting key = 1; value = 1; isReplaced = 0
+testmap: inserting key = 2; value = 2; isReplaced = 0
+testmap: inserting key = 3; value = 3; isReplaced = 0
+testmap: inserting key = 4; value = 4; isReplaced = 0
+testmap: inserting key = 5; value = 5; isReplaced = 0
+testmap: inserting key = 6; value = 6; isReplaced = 0
+testmap: inserting key = 7; value = 7; isReplaced = 0
+testmap: inserting key = 1; value = 1; isReplaced = 1
+testmap: inserting key = 2; value = 2; isReplaced = 1
+testmap: inserting key = 3; value = 3; isReplaced = 1
+testmap: inserting key = 4; value = 4; isReplaced = 1
+testmap: inserting key = 5; value = 5; isReplaced = 1
+testmap: inserting key = 6; value = 6; isReplaced = 1
+testmap: inserting key = 7; value = 7; isReplaced = 1
+testmap: retrieving key = 1; value = found in 3 hops
+1
+testmap: retrieving key = 2; value = found in 2 hops
+2
+testmap: retrieving key = 3; value = found in 3 hops
+3
+testmap: retrieving key = 4; value = found in 1 hops
+4
+testmap: retrieving key = 5; value = found in 3 hops
+5
+testmap: retrieving key = 6; value = found in 2 hops
+6
+testmap: retrieving key = 7; value = found in 3 hops
+7
+testmap: is empty after clearing: 1
+testmap: inserting key = 1; value = 1; isReplaced = 0
+testmap: inserting key = 2; value = 2; isReplaced = 0
+testmap: inserting key = 3; value = 3; isReplaced = 0
+testmap: inserting key = 4; value = 4; isReplaced = 0
+testmap: inserting key = 5; value = 5; isReplaced = 0
+testmap: inserting key = 6; value = 6; isReplaced = 0
+testmap: inserting key = 7; value = 7; isReplaced = 0
+BEGIN PRINT MAP IN ERASE LOOP
+key: 4, color: black, left key: 2, right key: 6
+key: 2, color: red, left key: 1, right key: 3
+key: 1, color: black, left key: 0, right key: 0
+key: 3, color: black, left key: 0, right key: 0
+key: 6, color: black, left key: 5, right key: 7
+key: 5, color: red, left key: 0, right key: 0
+key: 7, color: red, left key: 0, right key: 0
+END PRINT MAP IN ERASE LOOP
+testmap: erasing key = 1; isErased = 1
+BEGIN PRINT MAP IN ERASE LOOP
+key: 4, color: black, left key: 3, right key: 6
+key: 3, color: black, left key: 2, right key: 0
+key: 2, color: red, left key: 0, right key: 0
+key: 6, color: black, left key: 5, right key: 7
+key: 5, color: red, left key: 0, right key: 0
+key: 7, color: red, left key: 0, right key: 0
+END PRINT MAP IN ERASE LOOP
+testmap: erasing key = 2; isErased = 1
+BEGIN PRINT MAP IN ERASE LOOP
+key: 4, color: black, left key: 3, right key: 6
+key: 3, color: black, left key: 0, right key: 0
+key: 6, color: black, left key: 5, right key: 7
+key: 5, color: red, left key: 0, right key: 0
+key: 7, color: red, left key: 0, right key: 0
+END PRINT MAP IN ERASE LOOP
+testmap: erasing key = 3; isErased = 1
+BEGIN PRINT MAP IN ERASE LOOP
+key: 5, color: black, left key: 4, right key: 6
+key: 4, color: black, left key: 0, right key: 0
+key: 6, color: black, left key: 0, right key: 7
+key: 7, color: red, left key: 0, right key: 0
+END PRINT MAP IN ERASE LOOP
+testmap: erasing key = 4; isErased = 1
+BEGIN PRINT MAP IN ERASE LOOP
+key: 6, color: black, left key: 5, right key: 7
+key: 5, color: red, left key: 0, right key: 0
+key: 7, color: red, left key: 0, right key: 0
+END PRINT MAP IN ERASE LOOP
+testmap: erasing key = 5; isErased = 1
+BEGIN PRINT MAP IN ERASE LOOP
+key: 7, color: black, left key: 6, right key: 0
+key: 6, color: red, left key: 0, right key: 0
+END PRINT MAP IN ERASE LOOP
+testmap: erasing key = 6; isErased = 1
+BEGIN PRINT MAP IN ERASE LOOP
+key: 7, color: black, left key: 0, right key: 0
+END PRINT MAP IN ERASE LOOP
+testmap: erasing key = 7; isErased = 1
+testmap: is empty: 1

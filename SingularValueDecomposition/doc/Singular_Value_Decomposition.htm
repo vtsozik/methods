@@ -1,0 +1,465 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 10">
+<meta name="Originator" content="Microsoft Word 10">
+<link rel="File-List" href="http://web.mit.edu/be.400/www/SVD/Singular_Value_Decomposition_files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://web.mit.edu/be.400/www/SVD/Singular_Value_Decomposition_files/editdata.mso">
+<link rel="OLE-Object-Data" href="http://web.mit.edu/be.400/www/SVD/Singular_Value_Decomposition_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Singular Value Decomposition (SVD) tutorial</title>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="PlaceType"></o:smarttagtype>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="PlaceName"></o:smarttagtype>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="State"></o:smarttagtype>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="City"></o:smarttagtype>
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place"></o:smarttagtype>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ali Khadem</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Ali Khadem</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:LastPrinted>2002-09-23T04:17:00Z</o:LastPrinted>
+  <o:Created>2002-09-23T15:23:00Z</o:Created>
+  <o:LastSaved>2002-09-23T15:23:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>635</o:Words>
+  <o:Characters>3625</o:Characters>
+  <o:Company>MIT</o:Company>
+  <o:Lines>30</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4252</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Math1;
+	panose-1:5 0 5 2 6 1 0 0 0 1;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 63.0pt 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:809791108;
+	mso-list-type:hybrid;
+	mso-list-template-ids:168074644 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head><body style="" lang="EN-US">
+
+<div class="Section1">
+
+<p class="MsoNormal" style="text-align: center;" align="center"><b style=""><span style="font-size: 16pt;">Singular Value Decomposition (SVD)
+tutorial<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center">BE.400 / 7.548<o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="">Singular
+value decomposition takes a rectangular matrix of gene expression data (defined
+as A, where A is <span class="GramE">a</span> <i>n </i>x <i>p </i>matrix) in
+which the <i>n </i>rows represents the genes, and the <i>p </i>columns represents
+the experimental conditions. The SVD theorem states:<o:p></o:p></p>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><span class="SpellE"><b style=""><span style="font-size: 16pt;">A<i style=""><sub>nxp</sub></i></span></b></span><b style=""><span style="font-size: 16pt;">= <span class="SpellE">U<i style=""><sub>nxn</sub></i></span> <span class="SpellE">S<i style=""><sub>nxp</sub></i></span> <span class="SpellE">V<sup>T</sup><i style=""><sub>pxp</sub></i></span><sub><o:p></o:p></sub></span></b></p>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><span style="font-size: 14pt;">Where<o:p></o:p></span></p>
+
+<p class="MsoNormal"><b style=""><span style="font-size: 14pt;">U</span></b><sup><span style="font-size: 14pt;">T</span></sup><b style=""><span style="font-size: 14pt;">U</span></b><span style="font-size: 14pt;"> = <span class="SpellE"><b style="">I</b><sub>nxn</sub></span><o:p></o:p></span></p>
+
+<p class="MsoNormal"><b style=""><span style="font-size: 14pt;">V</span></b><sup><span style="font-size: 14pt;">T</span></sup><b style=""><span style="font-size: 14pt;">V</span></b><span style="font-size: 14pt;"> = <span class="SpellE"><span class="GramE"><b style="">I</b><sub>pxp</sub></span></span><span class="GramE"><sub> </sub><sub><span style="font-size: 12pt;"><span style="">&nbsp;</span></span></sub><span style="font-size: 12pt;">(</span></span></span>i.e.
+U and V are orthogonal)<span style="font-size: 14pt;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="">Where
+the columns of U are the left singular vectors (<i>gene coefficient vectors</i>);
+S (the same dimensions as <i>A</i>) has singular values and is diagonal (<i>mode
+amplitudes</i>); and V<sup>T</sup> has rows that are the right singular vectors
+(<i>expression level vectors</i>). The SVD represents an expansion of the
+original data in a coordinate system where the covariance matrix is diagonal.<o:p></o:p></p>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="margin-right: -9pt;">Calculating the SVD consists of
+finding the eigenvalues and eigenvectors of <i>AA<sup>T </sup></i>and <i>A<sup>T</sup>A</i>.
+The eigenvectors of <i>A<sup>T</sup>A</i> make up the columns of <span class="GramE"><i>V </i>,</span> the eigenvectors of <i>AA<sup>T </sup><span style="">&nbsp;</span></i>make up the columns of <i>U</i>. Also, the
+singular values in <b style="">S</b> are square
+roots of eigenvalues from <i style="">AA<sup>T</sup></i>
+or <i style="">A<sup>T</sup>A</i>.<span style="font-size: 20pt;"> <span style="">&nbsp;</span></span>The singular values are the diagonal
+entries of the <i>S </i>matrix and are arranged in descending order. The singular
+values are always real numbers. If the matrix <i>A </i>is a real matrix, then <i>U
+</i>and <i>V </i>are also real. </p>
+
+<p class="MsoNormal" style="margin-right: -9pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="">To
+understand how to solve for SVD, let’s take the example of the matrix that was
+provided in <span class="SpellE">Kuruvilla</span> <i style="">et al</i>:</p>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><b><sub><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:66.75pt;
+ height:1in' o:ole="">
+ <v:imagedata src="Singular_Value_Decomposition_files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Singular_Value_Decomposition_files/image002.gif" v:shapes="_x0000_i1025" height="96" width="89"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1094285354">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></b></p>
+
+<p class="MsoNormal" style=""><span style="">In this example the matrix is a 4x2 matrix.
+We know that for an n x n matrix W, then a nonzero vector <b>x</b> is the
+eigenvector of W if:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center; text-indent: 0.5in;" align="center"><span style="">W <b>x</b> = </span><span style="font-family: Symbol;"><span style="">l</span></span><span style=""> <b>x</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="">For some <span class="GramE">scalar </span></span><span style="font-family: Symbol;"><span style="">l</span></span><span style="">.<span style="">&nbsp; </span>Then
+the scalar </span><span style="font-family: Symbol;"><span style="">l</span></span><span style=""> is called an
+eigenvalue of A, and <b>x</b> is said to be an eigenvector of A corresponding <span class="GramE">to </span></span><span style="font-family: Symbol;"><span style="">l</span></span><span style="">.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="">So to find the eigenvalues of the above
+entity we compute matrices </span><i>AA<sup>T </sup></i>and <i>A<sup>T</sup>A</i>.
+<span style=""><span style="">&nbsp;</span>As
+previously <span class="GramE">stated <span style="">,</span></span></span>
+the eigenvectors of <i>AA<sup>T </sup><span style="">&nbsp;</span></i>make
+up the columns of <i>U </i><span style="">so we can
+do the following analysis to </span><st1:place><st1:placename><span style="">find</span></st1:placename><span style=""> </span><st1:placetype><span style="">U.</span></st1:placetype></st1:place><i> </i><span style=""><o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" style=""><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" style=""><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><b><sub><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:272.25pt;height:1in' o:ole="">
+ <v:imagedata src="Singular_Value_Decomposition_files/image003.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Singular_Value_Decomposition_files/image004.gif" v:shapes="_x0000_i1030" height="96" width="363"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1094285356">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></b></p>
+
+<p class="MsoNormal" style=""><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" style=""><span style="">Now that we have <span class="GramE">a</span> n
+x n matrix we can determine the eigenvalues of the matrix W.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center; text-indent: 0.5in;" align="center"><span style="">Since W <b>x</b> = </span><span style="font-family: Symbol;"><span style="">l</span></span><span style=""> <b>x</b> then<span style="">&nbsp;&nbsp; </span>(W- </span><span style="font-family: Symbol;"><span style="">l</span></span><span style="">I) <b>x</b> = 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><b><sub><!--[if gte vml 1]><v:shape id="_x0000_i1031"
+ type="#_x0000_t75" style='width:228pt;height:1in' o:ole="">
+ <v:imagedata src="Singular_Value_Decomposition_files/image005.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Singular_Value_Decomposition_files/image006.gif" v:shapes="_x0000_i1031" height="96" width="304"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1094285358">
+ </o:OLEObject>
+</xml><![endif]--></b><span style=""><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style="">For a unique set
+of eigenvalues to determinant of the matrix (W-</span><span style="font-family: Symbol;"><span style="">l</span></span><span style="">I) must be equal to zero.<span style="">&nbsp; </span>Thus from the solution of the characteristic
+equation, |W-</span><span style="font-family: Symbol;"><span style="">l</span></span><span style="">I|=0 we obtain:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="font-family: Symbol;"><span style="">l</span></span><span style="">=0, </span><span style="font-family: Symbol;"><span style="">l</span></span><span style="">=0; </span><span style="font-family: Symbol;"><span style="">l</span></span><span style=""> = 15+</span><span style="font-family: Math1;"><span style="">Ö</span></span><span style="">221.5 ~ 29.883;<span style="">&nbsp; </span></span><span style="font-family: Symbol;"><span style="">l</span></span><span style=""> = 15-</span><span style="font-family: Math1;"><span style="">Ö</span></span><span style="">221.5 ~ 0.117 (four eigenvalues since it is a
+<span class="GramE">fourth<span style="">&nbsp; </span>degree</span>
+polynomial).<span style="">&nbsp; </span>This value can be used to determine
+the eigenvector that can be placed in the columns of U.<span style="">&nbsp; </span>Thus we obtain the following equations:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left: 0.5in;"><span style="">19.883 x1 + 14 x2
+= 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left: 0.5in;"><span style="">14 x1 + 9.883 x2 =
+0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left: 0.5in;"><span class="GramE"><span style="">x3</span></span><span style=""><span style="">&nbsp; </span>= 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left: 0.5in;"><span class="GramE"><span style="">x4</span></span><span style=""> = 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="">Upon simplifying the first two equations we
+obtain a ratio which relates the value of x1 to x2.<span style="">&nbsp;&nbsp; </span>The values of x1 and x2 are chosen such that
+the elements of the S are the square roots of the eigenvalues.<span style="">&nbsp;&nbsp; </span>Thus a solution that satisfies the above equation
+x1 = -0.58 and x2 = 0.82 and x3 = x4 = 0 (this is the second column of the U
+matrix). <o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="">Substituting the other eigenvalue we obtain:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>-9.883
+x1 + 14 x2 = 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left: 0.5in;"><span style="">14 x1 - 19.883 x2
+= 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left: 0.5in;"><span class="GramE"><span style="">x3</span></span><span style=""><span style="">&nbsp; </span>= 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left: 0.5in;"><span class="GramE"><span style="">x4</span></span><span style=""> = 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="">Thus a solution that satisfies this set of
+equations is x1 = 0.82 and x2 = -0.58 and x3 = x4 = 0 (this is the first column
+of the U matrix). Combining these we obtain:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center; text-indent: 0.5in;" align="center"><span style=""><sub><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:131.25pt;height:1in' o:ole="">
+ <v:imagedata src="Singular_Value_Decomposition_files/image007.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Singular_Value_Decomposition_files/image008.gif" v:shapes="_x0000_i1026" height="96" width="175"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1094285359">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: 0.5in;"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="">Similarly </span><i>A<sup>T</sup>A</i> makes
+up the columns of <i>V</i><span style=""> so we can do
+a similar analysis to find the value of V.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><b><sub><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:141pt;height:1in' o:ole="">
+ <v:imagedata src="Singular_Value_Decomposition_files/image009.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Singular_Value_Decomposition_files/image010.gif" v:shapes="_x0000_i1027" height="96" width="188"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1094285360">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></b></p>
+
+<p class="MsoNormal" style=""><span class="GramE"><span style="">and</span></span><span style=""> similarly we obtain the expression:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><span style=""><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:95.25pt;height:36pt' o:ole="">
+ <v:imagedata src="Singular_Value_Decomposition_files/image011.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Singular_Value_Decomposition_files/image012.gif" v:shapes="_x0000_i1028" height="48" width="127"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1094285361">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="">Finally as mentioned previously the S is the
+square root of the eigenvalues from </span><i style="">AA<sup>T</sup></i>
+or <i style="">A<sup>T</sup>A. </i><span style="">&nbsp;</span><span class="GramE">and</span> can be obtained
+directly giving us:<span style=""><o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><span style=""><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:86.25pt;height:1in' o:ole="">
+ <v:imagedata src="Singular_Value_Decomposition_files/image013.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Singular_Value_Decomposition_files/image014.gif" v:shapes="_x0000_i1029" height="96" width="115"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1094285362">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><span style="">Note that:<span style="">&nbsp;
+</span></span><span style="font-family: Symbol;"><span style="">s</span></span><span style="">1 &gt; </span><span style="font-family: Symbol;"><span style="">s</span></span><span style="">2 &gt; </span><span style="font-family: Symbol;"><span style="">s</span></span><span style="">3 &gt; … which
+is what the paper was indicating by the figure 4 of the <span class="SpellE">Kuruvilla</span>
+paper.<span style="">&nbsp; </span>In that paper the values were
+computed and normalized such that the highest singular value was equal to 1.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal">Proof:<o:p></o:p></p>
+
+<p class="MsoNormal"><b style="">A</b>=<b style="">USV</b><sup>T</sup> and <b style="">A</b><sup>T</sup>=<b style="">VSU</b><sup>T</sup><o:p></o:p></p>
+
+<p class="MsoNormal"><b style="">A</b><sup>T</sup><b style="">A</b> = <b style="">VSU</b><sup>T</sup><b style="">USV</b><sup>T</sup>
+<o:p></o:p></p>
+
+<p class="MsoNormal"><b style="">A</b><sup>T</sup><b style="">A</b> = <b style="">VS</b><sup>2</sup><b style="">V</b><sup>T</sup><o:p></o:p></p>
+
+<p class="MsoNormal"><b style="">A</b><sup>T</sup><b style="">AV</b> = <b style="">VS</b><sup>2</sup><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align: center;" align="center"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style=""><b>References<o:p></o:p></b></p>
+
+<ul style="margin-top: 0in;" type="disc">
+ <li class="MsoNormal" style="">Alter O, Brown PO,
+     Botstein D. (2000) Singular value decomposition for genome-wide expression
+     data processing and modeling. <i>Proc <span class="SpellE">Natl</span> <span class="SpellE">Acad</span> <span class="SpellE">Sci</span> U S A</i>, <b>97</b>,
+     10101-6.<o:p></o:p></li>
+ <li class="MsoNormal" style="">Golub, G.H., and Van Loan,
+     C.F. (1989) Matrix Computations, 2nd ed. (<st1:city><st1:place>Baltimore</st1:place></st1:city>:
+     <st1:place><st1:placename>Johns</st1:placename> <st1:placename>Hopkins</st1:placename>
+      <st1:placetype>University</st1:placetype></st1:place> Press).<o:p></o:p></li>
+ <li class="MsoNormal" style="">Greenberg, M.<span style="">&nbsp; </span>(2001) <span style="font-size: 11pt;">Differential
+     equations &amp; Linear algebra (</span><st1:place><st1:city><span style="font-size: 11pt;">Upper Saddle River</span></st1:city><span style="font-size: 11pt;">, </span><st1:state><span style="font-size: 11pt;">N.J<span class="GramE">.</span></span></st1:state></st1:place><span class="GramE"><span style="font-size: 11pt;"> :</span></span><span style="font-size: 11pt;">&nbsp;Prentice
+     Hall).</span><o:p></o:p></li>
+ <li class="MsoNormal" style=""><span class="SpellE">Strang</span>,
+     G.<span style="">&nbsp; </span>(1998) <span style="font-size: 11pt;">Introduction to linear algebra (</span><st1:place><st1:city><span style="font-size: 11pt;">Wellesley</span></st1:city><span style="font-size: 11pt;">, </span><st1:state><span class="GramE"><span style="font-size: 11pt;">MA</span></span></st1:state></st1:place><span class="GramE"><span style="font-size: 11pt;"> :</span></span><span style="font-size: 11pt;">&nbsp;Wellesley-Cambridge Press).</span><o:p></o:p></li>
+</ul>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body></html>

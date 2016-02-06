@@ -1,0 +1,2 @@
+valgrind --tool=cachegrind --cache-sim=yes --branch-sim=yes --cachegrind-out-file=dumpb.txt ./a.out
+cg_annotate dumpb.txt --auto=yes searchinpartiallysortedmatrix.cpp > annb.txt

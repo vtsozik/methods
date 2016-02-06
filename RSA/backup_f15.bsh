@@ -1,0 +1,10 @@
+#!/bin/bash
+
+projn=rsa
+part=sdc1
+umount /mnt/flash
+mount /dev/$part /mnt/flash
+rm -rf /mnt/flash/$projn
+cp -rf `find ~vtsozik -type d -name $projn` /mnt/flash/
+umount /dev/$part
+rm -rf /mnt/flash/$projn
