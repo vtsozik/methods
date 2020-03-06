@@ -1,5 +1,5 @@
-//#define DEBUG_PRINT
-//#define MAIN
+#define DEBUG_PRINT
+#define MAIN
 #ifdef MAIN
 #include <iostream>
 using namespace std;
